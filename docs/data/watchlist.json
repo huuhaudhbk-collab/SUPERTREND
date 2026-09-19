@@ -1,5 +1,111 @@
-﻿{
- "fetched_at": null,
- "source": "none",
- "items": []
+{
+ "fetched_at": "2026-09-19T23:03:26+07:00",
+ "source": "variable",
+ "items": [
+  {
+   "symbol": "ANV",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DPG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DPR",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DXG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "GVR",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "HCM",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "HPG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "IDC",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "LHG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "MBB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "NKG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "PHR",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "POW",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SII",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SZC",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "TCB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "TCH",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VCB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VGI",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VHC",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VPB",
+   "company_name": "",
+   "exchange": ""
+  }
+ ]
 }
