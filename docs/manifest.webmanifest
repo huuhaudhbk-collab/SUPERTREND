@@ -1,0 +1,17 @@
+{
+  "name": "Candle Watch — mẫu hình nến sau phiên",
+  "short_name": "Candle Watch",
+  "description": "Cảnh báo 18 mẫu hình nến và xu hướng Supertrend trên danh mục tự nhập, quét sau phiên.",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F7F4EC",
+  "theme_color": "#1F3A2E",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

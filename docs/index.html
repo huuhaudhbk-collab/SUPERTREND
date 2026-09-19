@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1F3A2E">
+  <title>Candle Watch</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Source+Serif+4:ital,wght@1,400&display=swap">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-today" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M8 2v4"></path><path d="M16 2v4"></path><path d="M3 10h18"></path></symbol>
+    <symbol id="i-history" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20h18"></path><path d="M6 16l4-5 4 3 5-7"></path><path d="M8 4v3"></path><path d="M16 4v3"></path></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path><circle cx="9" cy="6" r="2" fill="#F7F4EC"></circle><circle cx="15" cy="12" r="2" fill="#F7F4EC"></circle><circle cx="8" cy="18" r="2" fill="#F7F4EC"></circle></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="#1F3A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24" fill="none" stroke="#1F3A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></symbol>
+    <!-- Logo B "Sao mai": nến giảm rỗng, nến nhỏ, nến xác nhận vàng -->
+    <symbol id="logo" viewBox="0 0 120 120"><rect x="0" y="0" width="120" height="120" rx="28" fill="#1F3A2E"></rect><line x1="30" y1="24" x2="30" y2="80" stroke="#F7F4EC" stroke-width="7" stroke-linecap="round"></line><rect x="20" y="34" width="20" height="30" rx="2" fill="#1F3A2E" stroke="#F7F4EC" stroke-width="6"></rect><line x1="60" y1="64" x2="60" y2="90" stroke="#F7F4EC" stroke-width="7" stroke-linecap="round"></line><rect x="50" y="72" width="20" height="9" rx="2" fill="#F7F4EC"></rect><line x1="90" y1="26" x2="90" y2="84" stroke="#C99A2E" stroke-width="7" stroke-linecap="round"></line><rect x="80" y="36" width="20" height="34" rx="2" fill="#C99A2E"></rect><line x1="16" y1="100" x2="104" y2="100" stroke="#F7F4EC" stroke-width="3" stroke-linecap="round" opacity="0.45"></line></symbol>
+  </defs>
+</svg>
+
+<main id="main">
+  <!-- ============ HÔM NAY ============ -->
+  <section class="panel on" id="p-today" role="tabpanel" aria-label="Hôm nay">
+    <div class="head">
+      <div class="row">
+        <div class="kicker">Cảnh báo sau phiên</div>
+        <div class="kicker">Nến · Xu hướng · Báo</div>
+      </div>
+      <div class="brand"><svg aria-hidden="true"><use href="#logo"/></svg><div class="title">CANDLE WATCH</div></div>
+      <div class="sub" id="todaySub">Mẫu hình nến và xu hướng trên nến đã chốt.</div>
+    </div>
+    <div class="strip" id="strip"><span class="v">Đang tải…</span></div>
+    <div id="trendBody"></div>
+    <div id="boardBody"></div>
+    <div id="todayBody"></div>
+    <div class="banner">
+      <b>Mẫu hình chỉ là điểm bắt đầu.</b>
+      <span>Tín hiệu MUA dùng cho phiên kế tiếp. Mẫu nến không lọc %K/xu hướng — dòng XU HƯỚNG trong thẻ cho biết Supertrend đang xanh hay đỏ để tự đối chiếu. Đo lại 2 năm: trong 15 mẫu cổ điển chỉ Nhấn chìm tăng và Sao mai Doji hơn mua-và-giữ, mẫu BÁN không dự báo được. Supertrend × EMA10 đo 7 năm: +6,7 %/lệnh, thắng 47 %, lãi đến từ ít lệnh bắt trọn sóng — xem README.</span>
+    </div>
+  </section>
+
+  <!-- ============ BIỂU ĐỒ ============ -->
+  <section class="panel" id="p-chart" role="tabpanel" aria-label="Biểu đồ">
+    <div class="head">
+      <div class="kicker">Supertrend (10,3) · EMA10 · nến ngày</div>
+      <div class="title small">BIỂU ĐỒ</div>
+      <div class="sub" id="chartSub">Chạm vào nến để xem giá và dải Supertrend.</div>
+    </div>
+    <div class="ctrl"><select id="c-sym" aria-label="Chọn mã"></select>
+      <div class="seg" id="c-range"><button type="button" data-n="60">60</button><button type="button" data-n="120" aria-pressed="true">120</button><button type="button" data-n="0">Tất cả</button></div></div>
+    <div class="legend"><span><i style="background:var(--up)"></i> Supertrend xanh (dừng lỗ)</span><span><i style="background:var(--down)"></i> Supertrend đỏ</span><span><i style="background:var(--ema)"></i> EMA10</span><span><i style="background:#E3EEDF;height:9px;border:1px solid #C4D3BB"></i> vùng xanh</span><span><i style="background:#F4E6E0;height:9px;border:1px solid #E0C8BE"></i> vùng đỏ</span><span>▲ mua · ▼ thoát</span></div>
+    <div class="chartbox"><canvas id="chart"></canvas><div class="tip" id="tip"></div><div class="range"><span id="r-lab">Đang tải nến…</span><input id="r-off" type="range" min="0" max="0" value="0" aria-label="Cuộn thời gian"></div></div>
+    <div class="cstat" id="cstat"></div>
+    <div class="foot">Nến lấy từ <span class="mono">docs/data/bars.json</span> (130 phiên/mã, job ghi mỗi ngày); Supertrend/EMA tính ngay trong trình duyệt, cùng công thức với job (ATR kiểu Wilder như TradingView). ▲ = "Supertrend xanh + giá vượt EMA10 lần đầu sau đợt đỏ", ▼ = Supertrend lật đỏ — đúng hai tín hiệu app báo.</div>
+  </section>
+
+  <!-- ============ LỊCH SỬ ============ -->
+  <section class="panel" id="p-history" role="tabpanel" aria-label="Lịch sử">
+    <div class="head">
+      <div class="kicker" id="histKicker">30 phiên gần nhất</div>
+      <div class="title small">LỊCH SỬ</div>
+      <div class="sub">Những gì máy đã thật sự báo — không tính lại từ quá khứ.</div>
+    </div>
+    <div class="totals" id="totals"></div>
+    <div class="days" id="days"></div>
+  </section>
+
+  <!-- ============ CÀI ĐẶT ============ -->
+  <section class="panel" id="p-settings" role="tabpanel" aria-label="Cài đặt">
+    <div class="head">
+      <div class="kicker">Thông báo · Danh mục · 18 mẫu hình + 2 tín hiệu xu hướng</div>
+      <div class="title small">CÀI ĐẶT</div>
+      <div class="sub">Nhập danh mục ở đây; tắt mẫu nào ồn — số đo lại nằm ở bên phải mỗi mẫu.</div>
+    </div>
+    <div class="sec">
+      <div class="card info">
+        <div class="top"><div class="num">01</div><h3>Thông báo trên máy này</h3><svg width="20" height="20" aria-hidden="true"><use href="#i-bell"/></svg></div>
+        <div class="state" id="pushState">Đang kiểm tra…</div>
+        <div class="btns">
+          <button type="button" class="btn primary" id="pushBtn">Bật thông báo</button>
+          <button type="button" class="btn" id="testBtn" hidden>Gửi thử</button>
+        </div>
+        <div id="subCodeWrap"></div>
+        <div class="more" id="pushHelp">Job chạy 15:35 T2–T6 trên GitHub Actions (dự phòng 16:05 / 16:45 / 18:10 nếu nguồn chốt muộn). Không có máy chủ riêng — điện thoại nhận qua Web Push của trình duyệt.</div>
+      </div>
+    </div>
+    <div class="sec">
+      <div class="card info">
+        <div class="top"><div class="num">02</div><h3>Danh mục theo dõi</h3><div class="kicker" id="wlCount"></div></div>
+        <div class="desc">Gõ các mã cần quét, cách nhau bởi dấu phẩy hoặc xuống dòng (VD <span class="mono">HPG, VNM, SSI</span>). Bấm <b>Chuẩn hoá &amp; sao chép</b> rồi dán vào GitHub — job đọc danh mục từ đó.</div>
+        <textarea id="wlTxt" class="wl" rows="4" placeholder="HPG, VNM, SSI…" autocapitalize="characters" autocorrect="off" spellcheck="false"></textarea>
+        <div class="state" id="wlState">Chưa có mã nào.</div>
+        <div class="btns">
+          <button type="button" class="btn primary" id="wlCopy">Chuẩn hoá &amp; sao chép</button>
+          <button type="button" class="btn" id="wlReset" hidden>Lấy lại danh mục job đang dùng</button>
+        </div>
+        <div class="more">Dán vào: GitHub → repo → <b>Settings</b> → <b>Secrets and variables</b> → <b>Actions</b> → tab <b>Variables</b> → <span class="mono">WATCHLIST</span> (lần đầu bấm <i>New repository variable</i>, đặt tên đúng <span class="mono">WATCHLIST</span>) → dán → Save. Sau đó vào <b>Actions</b> → <b>daily</b> → <i>Run workflow</i> để quét ngay, hoặc chờ 15:35. Mã mới có hiệu lực từ lần job chạy kế tiếp.</div>
+        <div class="more" id="wlJob"></div>
+      </div>
+    </div>
+    <div class="sec">
+      <div class="card warn">
+        <div class="top"><div class="num">03</div><h3>Xu hướng · Supertrend</h3><div class="kicker" id="trendCount"></div></div>
+        <div class="desc">Supertrend (10 phiên, 3 × ATR kiểu Wilder — giống TradingView) kết hợp EMA10. Chỉ chiều mua; tín hiệu đỏ là lời nhắc thoát hàng. <b>Mỗi tín hiệu là một thông báo riêng, không gộp vào bản tổng hợp</b> — hiếm (~1/phiên cả danh mục) và kèm mức dừng lỗ.</div>
+        <div class="rows" id="trendRows"></div>
+        <div class="more">Đo 11/2019 → 09/2026, 39 mã, khớp mở phiên sau, T+2, có phí: <b>+6,71 %/lệnh</b>, thắng 47 %, profit factor 2,65, giữ trung vị 34 phiên; mốc mua đại rồi giữ 34 phiên +3,93 %. Cả kỳ +212 % so với mua-và-giữ +294 %, nhưng sụt giảm sâu nhất −42 % so với −63 %. Cả 18 tổ hợp tham số lân cận đều dương. Tái lập: <span class="mono">scripts/replay_trend.py</span>.</div>
+      </div>
+    </div>
+    <div class="sec">
+      <div class="card buy">
+        <div class="top"><div class="num">04</div><h3>Mẫu MUA</h3><div class="kicker" id="buyCount"></div></div>
+        <div class="rows" id="buyRows"></div>
+      </div>
+    </div>
+    <div class="sec">
+      <div class="card sell">
+        <div class="top"><div class="num">05</div><h3>Mẫu BÁN</h3><div class="kicker" id="sellCount"></div></div>
+        <div class="rows" id="sellRows"></div>
+      </div>
+    </div>
+    <div class="foot" id="settingsFoot">Số "/th" là số lần xuất hiện mỗi tháng trên một danh mục 39 mã tham chiếu, đo 750 ngày (16/09/2026) — danh mục của anh khác thì tần suất khác; ba mẫu khối lượng đo 08/2022 → 09/2026; hai tín hiệu xu hướng đo 11/2019 → 09/2026. Công tắc đọc từ <span class="mono">docs/data/settings.json</span> (thêm <span class="mono">st_buy</span> / <span class="mono">st_exit</span> vào <span class="mono">patterns_disabled</span> để tắt) — đổi trên máy tính rồi đẩy lên GitHub; muốn bấm trực tiếp ở đây cần dựng Worker (GĐ 2).</div>
+    <div class="foot" id="stateFoot"></div>
+  </section>
+</main>
+
+<nav role="tablist" aria-label="Điều hướng">
+  <button role="tab" aria-selected="true" data-tab="today"><svg aria-hidden="true"><use href="#i-today"/></svg><span>Hôm nay</span></button>
+  <button role="tab" aria-selected="false" data-tab="history"><svg aria-hidden="true"><use href="#i-history"/></svg><span>Lịch sử</span></button>
+  <button role="tab" aria-selected="false" data-tab="chart"><svg aria-hidden="true"><use href="#i-chart"/></svg><span>Biểu đồ</span></button>
+  <button role="tab" aria-selected="false" data-tab="settings"><svg aria-hidden="true"><use href="#i-settings"/></svg><span>Cài đặt</span></button>
+</nav>
+
+<div class="toast" id="toast"><b id="toastTitle"></b><span id="toastBody"></span></div>
+
+<script src="config.js?v=1"></script>
+<script src="app.js?v=1"></script>
+</body>
+</html>
