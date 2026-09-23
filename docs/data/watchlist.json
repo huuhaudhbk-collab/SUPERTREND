@@ -1,9 +1,29 @@
 {
- "fetched_at": "2026-09-22T18:20:20+07:00",
+ "fetched_at": "2026-09-23T15:47:32+07:00",
  "source": "variable",
  "items": [
   {
+   "symbol": "ACV",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "ANV",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "CEO",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "D2D",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DGW",
    "company_name": "",
    "exchange": ""
   },
@@ -23,12 +43,42 @@
    "exchange": ""
   },
   {
+   "symbol": "FPT",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "GMD",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "GVR",
    "company_name": "",
    "exchange": ""
   },
   {
+   "symbol": "HAH",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "HCM",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "HDB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "HHV",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "HNV",
    "company_name": "",
    "exchange": ""
   },
@@ -43,6 +93,21 @@
    "exchange": ""
   },
   {
+   "symbol": "IPA",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "KDH",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "KLB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "LHG",
    "company_name": "",
    "exchange": ""
@@ -53,7 +118,32 @@
    "exchange": ""
   },
   {
+   "symbol": "MBS",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "MSB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "MSN",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "MWG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "NKG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "PC1",
    "company_name": "",
    "exchange": ""
   },
@@ -68,7 +158,32 @@
    "exchange": ""
   },
   {
-   "symbol": "SII",
+   "symbol": "PVP",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "PVT",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SCS",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SHB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SHS",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "SSI",
    "company_name": "",
    "exchange": ""
   },
@@ -88,7 +203,27 @@
    "exchange": ""
   },
   {
+   "symbol": "TCX",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "TPB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VAB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "VCB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VCK",
    "company_name": "",
    "exchange": ""
   },
@@ -103,7 +238,37 @@
    "exchange": ""
   },
   {
+   "symbol": "VIB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VIX",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VND",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VOS",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "VPB",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VPX",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VTP",
    "company_name": "",
    "exchange": ""
   }
