@@ -3,11 +3,11 @@
   "n": 1,
   "source": "fallback",
   "vapid": true,
-  "checked_at": "2026-09-25T18:21:08+07:00"
+  "checked_at": "2026-09-28T15:49:49+07:00"
  },
- "last_run": "2026-09-25T15:47:45+07:00",
+ "last_run": "2026-09-28T15:49:49+07:00",
  "watchlist": {
-  "n": 56,
+  "n": 57,
   "source": "variable"
  },
  "welcome": {
@@ -20,7 +20,7 @@
  "known_subs": [
   "dd68e2b431b37979"
  ],
- "last_trade_date": "2026-09-25",
+ "last_trade_date": "2026-09-28",
  "dnse_error": "",
  "push": {
   "source": "fallback",
@@ -30,7 +30,8 @@
   "failed": 0,
   "errors": [],
   "mode": "digest",
-  "n_symbols": 8,
-  "n_trend": 2
+  "n_symbols": 11,
+  "n_trend": 2,
+  "heartbeat": 1
  }
 }

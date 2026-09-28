@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-09-25T18:21:08+07:00",
+ "fetched_at": "2026-09-28T15:49:49+07:00",
  "source": "variable",
  "items": [
   {
@@ -254,6 +254,11 @@
   },
   {
    "symbol": "VIX",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "VN30",
    "company_name": "",
    "exchange": ""
   },
