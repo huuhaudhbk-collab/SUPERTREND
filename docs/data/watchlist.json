@@ -1,5 +1,5 @@
 {
- "fetched_at": "2026-10-01T18:22:56+07:00",
+ "fetched_at": "2026-10-02T15:48:49+07:00",
  "source": "variable",
  "items": [
   {
@@ -13,12 +13,22 @@
    "exchange": ""
   },
   {
+   "symbol": "CDN",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "CEO",
    "company_name": "",
    "exchange": ""
   },
   {
    "symbol": "D2D",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DBC",
    "company_name": "",
    "exchange": ""
   },
@@ -39,6 +49,11 @@
   },
   {
    "symbol": "DXG",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "DXP",
    "company_name": "",
    "exchange": ""
   },
@@ -153,7 +168,17 @@
    "exchange": ""
   },
   {
+   "symbol": "PAN",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
    "symbol": "PC1",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "PHP",
    "company_name": "",
    "exchange": ""
   },
@@ -214,6 +239,11 @@
   },
   {
    "symbol": "TCX",
+   "company_name": "",
+   "exchange": ""
+  },
+  {
+   "symbol": "TLG",
    "company_name": "",
    "exchange": ""
   },
